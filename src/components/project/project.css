@@ -1,0 +1,104 @@
+#project {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.project_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.3rem;
+    text-align: left;
+}
+
+.project_card {
+    background: var(--color-bg-variant);
+    padding: 1.5rem 2rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.project_card:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: pointer;
+}
+
+.project_card:hover .project_icon {
+    transform: rotate(360deg);
+}
+
+.project_container>div h2 {
+    color: var(--color-primary);
+}
+
+.project_name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project_icon {
+    font-size: 2.5rem;
+    margin-right: 0.5rem;
+}
+
+.project_about {
+    text-align: center;
+}
+
+.project_content {
+    padding: 1rem 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding-left: 1.5em;
+    /* Adjust the value as per your preference */
+    text-indent: -1.3em;
+    /* Counteract the padding with negative text-indent */
+}
+
+ul li::before {
+    content: "▹";
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .project_container {
+        grid-template-columns: 1fr;
+    }
+
+    .project_container>div {
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+
+    .project_content {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .project_container {
+        grid-template-columns: 1fr;
+    }
+
+    .project_container>div {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+}

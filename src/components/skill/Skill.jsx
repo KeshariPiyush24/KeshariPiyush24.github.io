@@ -2,7 +2,7 @@ import React from 'react'
 import './skill.css'
 import { BsPatchCheckFill } from 'react-icons/bs'
 
-const skill = () => {
+const Skill = () => {
   return (
     <section id='skill'>
       <h5>What Skills I have</h5>
@@ -105,4 +105,4 @@ const skill = () => {
   )
 }
 
-export default skill
+export default Skill

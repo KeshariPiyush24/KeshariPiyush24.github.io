@@ -2,7 +2,7 @@ import React from 'react'
 import './achievement.css'
 import { SlBadge } from 'react-icons/sl'
 
-const achievement = () => {
+const Achievement = () => {
   return (
     <section id='achievement'>
       <h5>What achievements I have</h5>
@@ -38,4 +38,4 @@ const achievement = () => {
   )
 }
 
-export default achievement
+export default Achievement

@@ -2,7 +2,7 @@ import React from 'react'
 import './education.css'
 import { BsBook } from 'react-icons/bs'
 
-const education = () => {
+const Education = () => {
   return (
     <section id='education'>
       <h5>What education I have</h5>
@@ -47,4 +47,4 @@ const education = () => {
   )
 }
 
-export default education
+export default Education
