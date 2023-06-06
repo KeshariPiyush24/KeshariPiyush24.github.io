@@ -48,6 +48,12 @@ body {
     margin: 0 auto;
 }
 
+.section-container {
+    padding: 2rem 4rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
 h1,
 h2,
 h3,

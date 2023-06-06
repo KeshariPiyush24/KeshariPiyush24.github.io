@@ -29,6 +29,10 @@
     transition: var(--transition);
 }
 
+.about_cards p {
+    font-size: 0.1rem;
+}
+
 .about_me-image:hover {
     transform: rotate(0);
 }

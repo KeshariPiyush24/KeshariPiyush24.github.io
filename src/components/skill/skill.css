@@ -10,7 +10,7 @@
     text-align: left;
 }
 
-.skill_container>div {
+.skill_card {
     background: var(--color-bg-variant);
     padding: 1.2rem;
     border-radius: 2rem;
@@ -18,13 +18,13 @@
     transition: var(--transition);
 }
 
-.skill_container>div:hover {
+.skill_card:hover {
     background: transparent;
     border-color: var(--color-primary-variant);
     cursor: default;
 }
 
-.skill_container>div h3 {
+.skill_card h3 {
     text-align: center;
     margin-bottom: 1rem;
     color: var(--color-primary);

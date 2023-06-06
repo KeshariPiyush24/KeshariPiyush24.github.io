@@ -7,7 +7,7 @@ import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
 
 const About = () => {
   return (
-    <section id='about'>
+    <section id='about' className="section-container">
 
       <h5>Get To Know</h5>
       <h1 style={{ marginBottom: '2.5rem' }}>About Me</h1>
@@ -24,7 +24,7 @@ const About = () => {
             <article className="about_card">
               <MdOutlineWorkOutline className='about_icon' />
               <h5>Experience</h5>
-              <small>1+ Years Working</small>
+              <small>1.5+ Years Working</small>
             </article>
 
             <article className="about_card">
@@ -41,7 +41,7 @@ const About = () => {
           </div>
 
           <p style={{ textAlign: "left" }}>
-            Hello! I am a final year computer science engineering student at GLA University and am passionate about software development and finding creative solutions to complex problems. I am always looking for new challenges and opportunities to learn and grow in my field. While I am just starting out in my career, I am confident in my ability to adapt to new technologies and work well with others. I am also flexible when it comes to communication and enjoy building relationships with my colleagues. I am excited to continue learning and growing as I progress in my career.
+            I am a computer science engineering graduate from GLA University (Class of 2023). I have a strong passion for software development and enjoy tackling complex problems. I thrive on new challenges and continuously seek opportunities to learn and grow. While I am relatively new to the industry, I am confident in my adaptability to emerging technologies and my ability to collaborate effectively with teammates. I am open to different communication styles and value building strong professional relationships. I am enthusiastic about advancing my skills and knowledge as I embark on my career journey.
           </p>
 
           <a href="#contact" className='btn btn_primary'>Let's Talk</a>

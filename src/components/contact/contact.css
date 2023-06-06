@@ -1,0 +1,143 @@
+#contact {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+p {
+    color: var(--color-text);
+    font-size: 1.4rem;
+}
+
+.contact_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.2rem;
+    text-align: center;
+}
+
+.contact_card {
+    background: var(--color-bg-variant);
+    padding: 1.3rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact_card:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: pointer;
+    transition: scale(1.5);
+}
+
+.contact_card h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.circle {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_icon {
+    width: 60%;
+    height: auto;
+}
+
+.contact_card:hover .contact_icon {
+    color: #f0f0f0f0;
+}
+
+.contact_card:hover {
+    transform: scale(1.2);
+}
+
+.twitter {
+    color: #1DA1F2;
+}
+
+.contact_card:hover .twitter {
+    background-color: #1DA1F2;
+}
+
+.instagram {
+    color: #E1306C;
+}
+
+.contact_card:hover .instagram {
+    background-color: #E1306C;
+}
+
+.github {
+    color: #333333;
+}
+
+.contact_card:hover .github {
+    background-color: #333333;
+}
+
+.stackoverflow {
+    color: #F48024;
+}
+
+.contact_card:hover .stackoverflow {
+    background-color: #F48024;
+}
+
+.leetcode {
+    color: #F89F1B;
+}
+
+.contact_card:hover .leetcode {
+    background-color: #F89F1B;
+}
+
+.linkedin {
+    color: #0077B5;
+}
+
+.contact_card:hover .linkedin {
+    background-color: #0077B5;
+}
+
+@media screen and (max-width: 1024px) {
+    .contact_container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact_container>div {
+        width: 100%;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+
+    .contact_content {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact_container {
+        gap: 1rem;
+    }
+
+    .contact_container>div {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+
+    .contact_content {
+        grid-template-columns: 1fr;
+    }
+}

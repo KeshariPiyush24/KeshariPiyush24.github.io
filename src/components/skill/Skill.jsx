@@ -9,7 +9,7 @@ const Skill = () => {
       <h1 style={{ marginBottom: '2.5rem' }}>My Skills</h1>
 
       <div className="container skill_container">
-        <div className="skill_frontend">
+        <div className="skill_card">
           <h3>Frontend Development</h3>
           <div className="skill_content">
             <article className="skill_details">
@@ -38,7 +38,7 @@ const Skill = () => {
             </article>
           </div>
         </div>
-        <div className="skill_backend">
+        <div className="skill_card">
           <h3>Backend Development</h3>
           <div className="skill_content">
             <article className="skill_details">
@@ -71,7 +71,7 @@ const Skill = () => {
             </article>
           </div>
         </div>
-        <div className="skill_tools">
+        <div className="skill_card">
           <h3>Tools</h3>
           <div className="skill_content">
             <article className="skill_details">

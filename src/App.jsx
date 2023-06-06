@@ -11,7 +11,6 @@ import Experience from './components/experience/Experience'
 import Achievement from './components/achievement/Achievement'
 import Project from './components/project/Project'
 import Contact from './components/contact/Contact'
-import Footer from './components/footer/Footer'
 
 const App = () => {
   return (
@@ -25,7 +24,6 @@ const App = () => {
       <Achievement />
       <Project />
       <Contact />
-      <Footer />
     </>
   )
 }

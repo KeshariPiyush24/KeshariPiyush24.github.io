@@ -4,7 +4,7 @@ import { BsBook } from 'react-icons/bs'
 
 const Education = () => {
   return (
-    <section id='education'>
+    <section id='education' className="section-container">
       <h5>What education I have</h5>
       <h1 style={{ marginBottom: '2.5rem' }}>My education</h1>
 

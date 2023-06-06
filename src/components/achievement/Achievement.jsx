@@ -4,7 +4,7 @@ import { SlBadge } from 'react-icons/sl'
 
 const Achievement = () => {
   return (
-    <section id='achievement'>
+    <section id='achievement' className="section-container">
       <h5>What achievements I have</h5>
       <h1 style={{ marginBottom: '2.5rem' }}>My achievements and certificates</h1>
 
