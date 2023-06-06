@@ -29,7 +29,8 @@ h2 {
 }
 
 .project_card:hover .project_icon {
-    transform: rotate(360deg);
+    transform: rotate(270deg);
+    transition: var(--transition);
 }
 
 .project_container>div h2 {

@@ -19,9 +19,23 @@ const Project = () => {
           </div>
           <div className="project_content">
             <ul>
-              <li>Migrated legacy code logic from PHP to Node.js, ensuring a seamless transition and improved performance.</li>
-              <li>Deployed multiple sales on ecommerce platform, including SKU addition, price configuration, and discount coupon integration.</li>
-              <li>Developed new APIs on ecommerce platform for a user type, enabling profile management, order creation, and dashboard APIs for search, sorting, and filtering.</li>
+              <li>Implemented Huffman compression technique for text based file compression.</li>
+              <li>Used Google Guava library for bi directional map which is not native to java.</li>
+            </ul>
+          </div>
+        </div>
+        <div className="project_card">
+          <div className="project_name">
+            <BiAtom className="project_icon" />
+            <h2>COVID 19 LIVE Tracker</h2>
+          </div>
+          <div className="project_about">
+            A Jupiter Notebook bases project which uses python to fetch live data from API and display it in a tabular format.
+          </div>
+          <div className="project_content">
+            <ul>
+              <li>Fetched live covid 19 data from Govt of India API and displayed it on Jupiter Notebook with some processing.</li>
+              <li>Created a workflow on github actions to automate the push and pull of new data every 5 mins.</li>
             </ul>
           </div>
         </div>
