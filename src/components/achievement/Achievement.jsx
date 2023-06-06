@@ -6,7 +6,7 @@ const Achievement = () => {
   return (
     <section id='achievement' className="section-container">
       <h5>What achievements I have</h5>
-      <h1 style={{ marginBottom: '2.5rem' }}>My achievements and certificates</h1>
+      <h1 style={{ marginBottom: '2.5rem' }}>My Achievements and Certificates</h1>
 
       <div className="container achievement_container">
         <div className="achievement_card">
