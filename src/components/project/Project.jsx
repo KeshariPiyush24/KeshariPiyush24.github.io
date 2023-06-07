@@ -9,7 +9,7 @@ const Project = () => {
       <h1 style={{ marginBottom: '2.5rem' }}>My Projects</h1>
 
       <div className="container project_container">
-        <div className="project_card">
+        <a className="project_card" href="https://github.com/KeshariPiyush24/Huffman-Compressor" target='_blank'>
           <div className="project_name">
             <BiAtom className="project_icon" />
             <h2>Huffman Compressor</h2>
@@ -23,8 +23,8 @@ const Project = () => {
               <li>Used Google Guava library for bi directional map which is not native to java.</li>
             </ul>
           </div>
-        </div>
-        <div className="project_card">
+        </a>
+        <a className="project_card" href="https://github.com/KeshariPiyush24/COVID-19-Outbreak-India" target='_blank'>
           <div className="project_name">
             <BiAtom className="project_icon" />
             <h2>COVID 19 LIVE Tracker</h2>
@@ -38,7 +38,7 @@ const Project = () => {
               <li>Created a workflow on github actions to automate the push and pull of new data every 5 mins.</li>
             </ul>
           </div>
-        </div>
+        </a>
       </div>
     </section>
   )

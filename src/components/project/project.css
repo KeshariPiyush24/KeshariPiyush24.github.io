@@ -5,6 +5,7 @@
 
 h2 {
     font-size: 1.5rem;
+    color: var(--color-primary);
 }
 
 .project_container {
@@ -20,6 +21,7 @@ h2 {
     border-radius: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
+    color: white;
 }
 
 .project_card:hover {

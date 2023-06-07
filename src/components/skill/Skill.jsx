@@ -80,15 +80,7 @@ const Skill = () => {
             </article>
             <article className="skill_details">
               <BsPatchCheckFill className="skill_details-icon" />
-              <div><h4>Git and Github</h4></div>
-            </article>
-            <article className="skill_details">
-              <BsPatchCheckFill className="skill_details-icon" />
               <div><h4>Postman</h4></div>
-            </article>
-            <article className="skill_details">
-              <BsPatchCheckFill className="skill_details-icon" />
-              <div><h4>Chrome Dev tools</h4></div>
             </article>
             <article className="skill_details">
               <BsPatchCheckFill className="skill_details-icon" />
@@ -97,6 +89,14 @@ const Skill = () => {
             <article className="skill_details">
               <BsPatchCheckFill className="skill_details-icon" />
               <div><h4>Jira</h4></div>
+            </article>
+            <article className="skill_details">
+              <BsPatchCheckFill className="skill_details-icon" />
+              <div><h4>Git and Github</h4></div>
+            </article>
+            <article className="skill_details">
+              <BsPatchCheckFill className="skill_details-icon" />
+              <div><h4>Chrome Dev tools</h4></div>
             </article>
           </div>
         </div>
