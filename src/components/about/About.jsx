@@ -24,13 +24,13 @@ const About = () => {
             <article className="about_card">
               <MdOutlineWorkOutline className='about_icon' />
               <h5>Experience</h5>
-              <small>1.5+ Years Working</small>
+              <small>2.5+ Years Working</small>
             </article>
 
             <article className="about_card">
               <AiOutlineCode className='about_icon' />
               <h5>DSA</h5>
-              <small>600+ on LeetCode</small>
+              <small>650+ on LeetCode</small>
             </article>
 
             <article className="about_card">
