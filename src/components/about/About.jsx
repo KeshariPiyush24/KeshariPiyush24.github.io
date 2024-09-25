@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section id='about' className="section-container">
 
-      <h5>Get To Know</h5>
+      <h5>Get To Know Me</h5>
       <h1 style={{ marginBottom: '2.5rem' }}>About Me</h1>
 
       <div className="container about_container">
