@@ -36,12 +36,12 @@ const About = () => {
             <article className="about_card">
               <AiOutlineFundProjectionScreen className='about_icon' />
               <h5>Projects</h5>
-              <small>5+ Completed</small>
+              <small>3+ Completed</small>
             </article>
           </div>
 
           <p style={{ textAlign: "left" }}>
-            I am a computer science engineering graduate from GLA University (Class of 2023). I have a strong passion for software development and enjoy tackling complex problems. I thrive on new challenges and continuously seek opportunities to learn and grow. While I am relatively new to the industry, I am confident in my adaptability to emerging technologies and my ability to collaborate effectively with teammates. I am open to different communication styles and value building strong professional relationships. I am enthusiastic about advancing my skills and knowledge as I embark on my career journey.
+            Full Stack Web Developer with 2.5+ years of experience specializing in JavaScript, Node.js, and React.js. Proven track record of developing and optimizing web applications, can quickly learn new technologies and collaborate in fast-paced environments
           </p>
 
           <a href="#contact" className='btn btn_primary'>Let's Talk</a>
