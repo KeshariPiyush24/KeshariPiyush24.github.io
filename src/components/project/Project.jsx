@@ -5,8 +5,10 @@ import { BiAtom } from 'react-icons/bi'
 const Project = () => {
   return (
     <section id='project' className="section-container">
-      <h5>What Projects I have</h5>
-      <h1 style={{ marginBottom: '2.5rem' }}>My Projects</h1>
+      <div className="section_heading">
+        <h5>What Projects I have</h5>
+        <h1>My Projects</h1>
+      </div>
 
       <div className="container project_container">
         <div className="project_card">

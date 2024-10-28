@@ -6,8 +6,10 @@ import { SiLeetcode } from 'react-icons/si'
 const Contact = () => {
   return (
     <section id='contact' className="section-container">
-      <h5>Social media? I got it</h5>
-      <h1 style={{ marginBottom: '2.5rem' }}>Let's Connect</h1>
+      <div className="section_heading">
+        <h5>Social media? I got it</h5>
+        <h1>Let's Connect</h1>
+      </div>
 
       <div className="container contact_container">
         <div className="contact_card">

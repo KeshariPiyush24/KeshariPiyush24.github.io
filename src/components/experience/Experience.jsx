@@ -5,8 +5,10 @@ import { MdWorkOutline } from 'react-icons/md'
 const Experience = () => {
   return (
     <section id='experience' className="section-container">
-      <h5>What Experience I have</h5>
-      <h1 style={{ marginBottom: '2.5rem' }}>My Experience</h1>
+      <div className="section_heading">
+        <h5>What Experience I have</h5>
+        <h1>My Experience</h1>
+      </div>
 
       <div className="container experience_container">
         <div className="experience_card">

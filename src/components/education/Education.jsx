@@ -7,7 +7,7 @@ const Education = () => {
     <section id='education' className="section-container">
       <div className="education_heading">
         <h5>What education I have</h5>
-        <h1>My Education</h1>
+        <h1>My Educations</h1>
       </div>
 
       <div className="container education_container">

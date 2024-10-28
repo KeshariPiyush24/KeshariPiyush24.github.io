@@ -8,7 +8,7 @@ import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
 const About = () => {
   return (
     <section id='about' className="section-container">
-      <div className="about_heading">
+      <div className="section_heading">
         <h5>Get To Know Me</h5>
         <h1>About Me</h1>
       </div>

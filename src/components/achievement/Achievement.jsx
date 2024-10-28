@@ -5,8 +5,10 @@ import { SlBadge } from 'react-icons/sl'
 const Achievement = () => {
   return (
     <section id='achievement' className="section-container">
-      <h5>What Achievements I Have</h5>
-      <h1 style={{ marginBottom: '2.5rem' }}>My Achievements</h1>
+      <div className="section_heading">
+        <h5>What Achievements I Have</h5>
+        <h1>My Achievements</h1>
+      </div>
 
       <div className="container achievement_container">
         <div className="achievement_card">

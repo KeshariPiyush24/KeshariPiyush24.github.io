@@ -59,7 +59,7 @@
 .skill_content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem 1rem;
+    gap: 1rem;
 }
 
 .skill_details {
