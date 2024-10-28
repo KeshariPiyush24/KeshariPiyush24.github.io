@@ -246,3 +246,15 @@ img {
         font-size: 1.8rem;
     }
 }
+
+/* Add this at the end of the file */
+.cursor-dot {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transition: transform 0.15s ease;
+    z-index: 9999;
+}

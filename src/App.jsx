@@ -11,10 +11,12 @@ import Skill from './components/skill/Skill'
 import Project from './components/project/Project'
 import Achievement from './components/achievement/Achievement'
 import Contact from './components/contact/Contact'
+import MouseFollower from './components/MouseFollower'
 
 const App = () => {
   return (
     <>
+      <MouseFollower />
       <section id="home" className="section-container">
         <Header />
       </section>
