@@ -8,9 +8,10 @@ import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
 const About = () => {
   return (
     <section id='about' className="section-container">
-
-      <h5>Get To Know Me</h5>
-      <h1 style={{ marginBottom: '2.5rem' }}>About Me</h1>
+      <div className="about_heading">
+        <h5>Get To Know Me</h5>
+        <h1>About Me</h1>
+      </div>
 
       <div className="container about_container">
         <div className="about_me">
@@ -40,11 +41,13 @@ const About = () => {
             </article>
           </div>
 
-          <p style={{ textAlign: "left" }}>
-            Full Stack Web Developer with 2.5+ years of experience specializing in JavaScript, Node.js, and React.js. Proven track record of developing and optimizing web applications, can quickly learn new technologies and collaborate in fast-paced environments
+          <p className="about_description">
+            Full Stack Developer with 2.5+ years of experience specializing in JavaScript-based web applications and
+            microservices. Proven expertise in React.js, Node.js, and modern DevOps practices. Demonstrated success in optimizing
+            application performance, implementing automated testing, and maintaining high-quality codebases. Strong background in
+            developing RESTful APIs and integrating third-party services. Skilled at analyzing application logs and implementing
+            structured error handling systems.
           </p>
-
-          <a href="#contact" className='btn btn_primary'>Let's Talk</a>
         </div>
       </div>
     </section>

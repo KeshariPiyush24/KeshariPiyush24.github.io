@@ -25,17 +25,65 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1rem;
     position: absolute;
-    left: 0;
+    left: 3rem;
     bottom: 3rem;
 }
 
+.header_socials .circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.header_social_icon {
+    width: 50%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Social Media Colors */
+.header_socials .twitter {
+    color: #1DA1F2;
+    background: rgba(29, 161, 242, 0.1);
+}
+
+.header_socials a:hover .twitter {
+    background-color: #1DA1F2;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.header_socials .github {
+    color: #333333;
+    background: rgba(51, 51, 51, 0.1);
+}
+
+.header_socials a:hover .github {
+    background-color: #333333;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.header_socials .linkedin {
+    color: #0077B5;
+    background: rgba(0, 119, 181, 0.1);
+}
+
+.header_socials a:hover .linkedin {
+    background-color: #0077B5;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Remove the after pseudo-element */
 .header_socials::after {
-    content: "";
-    width: 1px;
-    height: 2rem;
-    background: var(--color-primary);
+    display: none;
 }
 
 /* ============ ME ============== */

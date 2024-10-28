@@ -1,6 +1,11 @@
 #experience {
-    padding: 2rem 0;
+    padding: 5rem 0;
+    /* Increased padding to match skills section */
     text-align: center;
+    background: linear-gradient(180deg,
+            transparent,
+            var(--color-bg-variant),
+            transparent);
 }
 
 .experience_container {
@@ -8,12 +13,14 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 1.3rem;
     text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .experience_card {
     background: var(--color-bg-variant);
-    padding: 1.5rem 2rem;
-    border-radius: 2rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 1.5rem;
     border: 1px solid transparent;
     transition: var(--transition);
 }
@@ -22,6 +29,8 @@
     background: transparent;
     border-color: var(--color-primary-variant);
     cursor: default;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .experience_container>div h2 {
@@ -32,70 +41,104 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    position: relative;
 }
 
 .work_icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-right: 0.5rem;
 }
 
 .experience_position {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
 }
 
 .experience_duration {
+    position: absolute;
+    right: 0;
     color: var(--color-light);
+    font-size: 0.9rem;
 }
 
 .experience_content {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 }
 
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 ul li {
-    padding-left: 1.5em;
-    /* Adjust the value as per your preference */
-    text-indent: -1.3em;
-    /* Counteract the padding with negative text-indent */
+    padding-left: 1.25em;
+    text-indent: -1.1em;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-light);
+}
+
+ul li:last-child {
+    margin-bottom: 0;
 }
 
 ul li::before {
     content: "▹";
     color: var(--color-primary);
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    margin-right: 0.4rem;
 }
 
 @media screen and (max-width: 1024px) {
     .experience_container {
         grid-template-columns: 1fr;
+        width: 90%;
     }
 
-    .experience_container>div {
-        width: 80%;
-        padding: 2rem;
-        margin: 0 auto;
-    }
-
-    .experience_content {
-        padding: 1rem;
+    .experience_card {
+        padding: 1.25rem;
     }
 }
 
 @media screen and (max-width: 600px) {
     .experience_container {
-        grid-template-columns: 1fr;
+        width: 95%;
     }
 
-    .experience_container>div {
-        width: 100%;
-        padding: 2rem 1rem;
+    .experience_card {
+        padding: 1rem;
     }
+
+    .company_name {
+        font-size: 1.1rem;
+    }
+
+    .work_icon {
+        font-size: 1.8rem;
+    }
+
+    .experience_position {
+        font-size: 0.9rem;
+    }
+
+    ul li {
+        font-size: 0.85rem;
+    }
+}
+
+/* Add these styles to your existing CSS */
+
+.experience_content h4 {
+    color: var(--color-primary);
+    font-size: 1rem;
+    margin: 1rem 0 0.5rem 0;
+    text-align: left;
+}
+
+.experience_content h4:first-child {
+    margin-top: 0;
 }
