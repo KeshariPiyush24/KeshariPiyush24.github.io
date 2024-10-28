@@ -15,15 +15,31 @@ import Contact from './components/contact/Contact'
 const App = () => {
   return (
     <>
-      <Header />
+      <section id="home" className="section-container">
+        <Header />
+      </section>
       <Nav />
-      <About />
-      <Education />
-      <Experience />
-      <Skill />
-      <Project />
-      <Achievement />
-      <Contact />
+      <section id="about" className="section-container">
+        <About />
+      </section>
+      <section id="education" className="section-container">
+        <Education />
+      </section>
+      <section id="experience" className="section-container">
+        <Experience />
+      </section>
+      <section id="skill" className="section-container">
+        <Skill />
+      </section>
+      <section id="project" className="section-container">
+        <Project />
+      </section>
+      <section id="achievement" className="section-container">
+        <Achievement />
+      </section>
+      <section id="contact" className="section-container">
+        <Contact />
+      </section>
     </>
   )
 }

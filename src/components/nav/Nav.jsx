@@ -16,44 +16,46 @@ const Nav = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Get the current scroll position
       const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const sections = document.querySelectorAll('section');
 
-      // Find the section that is currently in view
-      const sections = document.querySelectorAll('.section-container');
-      let activeSectionId = '#';
+      // Special handling for home section when at the top
+      if (scrollPosition < windowHeight / 2) {
+        setActiveNav('#home');
+        return;
+      }
 
       sections.forEach((section) => {
-        const top = section.offsetTop;
-        const height = section.offsetHeight;
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
 
-        if (scrollPosition >= top && scrollPosition < top + height) {
-          if (section.classList.contains('home') && scrollPosition + window.innerHeight === document.body.clientHeight) {
-            // Check if the home section is completely in view
-            activeSectionId = `#${section.id}`;
-          } else if (!section.classList.contains('home')) {
-            // Exclude the home section from being considered as active
-            activeSectionId = `#${section.id}`;
-          }
+        if (
+          scrollPosition >= sectionTop - windowHeight / 2 &&
+          scrollPosition < sectionTop + sectionHeight - windowHeight / 2
+        ) {
+          setActiveNav(`#${section.id}`);
         }
       });
-
-      // Update the activeNav state
-      setActiveNav(activeSectionId);
     };
 
-    // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener on component unmount
+    // Call handleScroll initially to set correct active state
+    handleScroll();
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []); // Empty dependency array ensures that the effect runs only once on component mount
+  }, []);
 
   return (
     <nav>
-      <a href="#" onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}>
+      <a
+        href="#home"
+        onClick={() => setActiveNav('#home')}
+        className={activeNav === '#home' ? 'active' : ''}
+      >
         <AiOutlineHome />
         <small>Home</small>
       </a>
