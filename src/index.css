@@ -29,6 +29,9 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
 }
 
 ::-webkit-scrollbar {
@@ -41,6 +44,7 @@ body {
     color: var(--color-white);
     line-height: 1.7;
     background-image: url(./assets/bg-texture.png);
+    min-height: 100vh;
 }
 
 /* =================== GENERAL STYLES =============== */
@@ -48,6 +52,7 @@ body {
 .container {
     width: var(--container-width-lg);
     margin: 0 auto;
+    height: 100%;
 }
 
 .section-container {
@@ -72,8 +77,15 @@ h1 {
 }
 
 section {
-    margin-top: 8rem;
-    height: 100vh;
+    margin-top: 0;
+    /* Remove the top margin */
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    position: relative;
+    overflow: hidden;
+    padding-top: 8rem;
+    /* Add padding instead of margin for spacing */
 }
 
 section>h2,
