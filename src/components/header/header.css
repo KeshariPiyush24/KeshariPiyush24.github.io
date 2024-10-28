@@ -81,6 +81,17 @@ header {
     transform: translateY(-3px);
 }
 
+.header_socials .instagram {
+    color: #E4405F;
+    background: rgba(228, 64, 95, 0.1);
+}
+
+.header_socials a:hover .instagram {
+    background-color: #E4405F;
+    color: white;
+    transform: translateY(-3px);
+}
+
 /* Remove the after pseudo-element */
 .header_socials::after {
     display: none;
