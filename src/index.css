@@ -17,6 +17,8 @@
     --color-primary-variant: #rgba(77, 181, 255, 0.4);
     --color-white: #fff;
     --color-light: rgba(255, 255, 255, 0.6);
+    --color-primary-rgb: 77, 181, 255;
+    /* Adjust these RGB values to match your primary color */
 
     --transition: all 400ms ease;
 
