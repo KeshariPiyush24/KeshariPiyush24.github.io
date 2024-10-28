@@ -15,7 +15,7 @@ const Experience = () => {
           <div className="company_name">
             <MdWorkOutline className="work_icon" />
             <h2>Springworks</h2>
-            <span className="experience_duration">2023 - Present</span>
+            <span className="experience_duration duration_pill">2023 - Present</span>
           </div>
           <div className="experience_position">
             <p>Software Development Engineer 1</p>
@@ -34,7 +34,7 @@ const Experience = () => {
           <div className="company_name">
             <MdWorkOutline className="work_icon" />
             <h2>Springworks</h2>
-            <span className="experience_duration">2022 - 2023</span>
+            <span className="experience_duration duration_pill">2022 - 2023</span>
           </div>
           <div className="experience_position">
             <p>Software Development Engineer Intern</p>

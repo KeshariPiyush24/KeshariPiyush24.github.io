@@ -61,6 +61,9 @@
     right: 0;
     color: var(--color-light);
     font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
 }
 
 .experience_content {
@@ -127,6 +130,14 @@ ul li::before {
 
     ul li {
         font-size: 0.85rem;
+    }
+
+    .experience_duration {
+        position: static;
+        display: inline-block;
+        margin-left: 1rem;
+        font-size: 0.85rem;
+        padding: 0.2rem 0.6rem;
     }
 }
 
