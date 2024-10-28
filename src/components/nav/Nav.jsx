@@ -55,6 +55,7 @@ const Nav = () => {
     <nav>
       <a href="#" onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}>
         <AiOutlineHome />
+        <small>Home</small>
       </a>
       <a
         href="#about"
@@ -62,6 +63,7 @@ const Nav = () => {
         className={activeNav === '#about' ? 'active' : ''}
       >
         <AiOutlineUser />
+        <small>About</small>
       </a>
       <a
         href="#education"
@@ -69,9 +71,7 @@ const Nav = () => {
         className={activeNav === '#education' ? 'active' : ''}
       >
         <AiOutlineBook />
-      </a>
-      <a href="#skill" onClick={() => setActiveNav('#skill')} className={activeNav === '#skill' ? 'active' : ''}>
-        <BsStarHalf />
+        <small>Education</small>
       </a>
       <a
         href="#experience"
@@ -79,6 +79,11 @@ const Nav = () => {
         className={activeNav === '#experience' ? 'active' : ''}
       >
         <MdOutlineWorkOutline />
+        <small>Experience</small>
+      </a>
+      <a href="#skill" onClick={() => setActiveNav('#skill')} className={activeNav === '#skill' ? 'active' : ''}>
+        <BsStarHalf />
+        <small>Skills</small>
       </a>
       <a
         href="#project"
@@ -86,6 +91,7 @@ const Nav = () => {
         className={activeNav === '#project' ? 'active' : ''}
       >
         <AiOutlineFundProjectionScreen />
+        <small>Projects</small>
       </a>
       <a
         href="#achievement"
@@ -93,6 +99,7 @@ const Nav = () => {
         className={activeNav === '#achievement' ? 'active' : ''}
       >
         <GiAchievement />
+        <small>Achievements</small>
       </a>
       <a
         href="#contact"
@@ -100,6 +107,7 @@ const Nav = () => {
         className={activeNav === '#contact' ? 'active' : ''}
       >
         <AiOutlineMessage />
+        <small>Contact</small>
       </a>
     </nav>
   );
