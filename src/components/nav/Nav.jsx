@@ -81,18 +81,18 @@ const Nav = () => {
         <MdOutlineWorkOutline />
       </a>
       <a
-        href="#achievement"
-        onClick={() => setActiveNav('#achievement')}
-        className={activeNav === '#achievement' ? 'active' : ''}
-      >
-        <GiAchievement />
-      </a>
-      <a
         href="#project"
         onClick={() => setActiveNav('#project')}
         className={activeNav === '#project' ? 'active' : ''}
       >
         <AiOutlineFundProjectionScreen />
+      </a>
+      <a
+        href="#achievement"
+        onClick={() => setActiveNav('#achievement')}
+        className={activeNav === '#achievement' ? 'active' : ''}
+      >
+        <GiAchievement />
       </a>
       <a
         href="#contact"
