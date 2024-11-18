@@ -1,0 +1,191 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+\usepackage{xcolor}
+
+\definecolor{accentTitle}{HTML}{0e6e55}
+\definecolor{accentText}{HTML}{0e6e55}
+\definecolor{accentLine}{HTML}{a16f0b}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+
+% Adjust margins for better spacing
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.9in}
+\addtolength{\textheight}{1.5in}
+
+% Optimize spacing
+\setlength{\multicolsep}{0.2pt}
+\setlength{\columnsep}{5pt}
+\setlength{\tabcolsep}{0.7pt}
+\setlength{\footskip}{3.7pt}
+\raggedbottom
+\raggedright
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\newcommand{\documentTitle}[2]{
+ \begin{center}
+   {\Huge\color{accentTitle} #1}
+   \vspace{2pt}
+   {\color{accentLine} \hrule height 0.8pt}
+   \vspace{1pt}
+   \footnotesize{#2}
+   \vspace{1pt}
+   {\color{accentLine} \hrule height 0.8pt}
+ \end{center}
+}
+
+\titleformat{\section}{
+  \vspace{0.2pt}
+  \color{accentText}
+  \raggedright\large\bfseries
+}{}{0em}{}[\color{accentLine}\titlerule]
+
+\newcommand{\tinysection}[1]{
+  \phantomsection
+  \addcontentsline{toc}{section}{#1}
+  {\large{\bfseries\color{accentText}#1} {\color{accentLine} |}}
+  \vspace{0.4pt}
+}
+
+\newcommand{\heading}[2]{
+  \hspace{6pt}#1\hfill#2\\[0.8pt]
+}
+
+\newcommand{\headingBf}[2]{
+  \heading{\textbf{#1}}{\textbf{#2}}
+}
+
+\newcommand{\headingIt}[2]{
+  \heading{\textit{#1}}{\textit{#2}}
+}
+
+\newenvironment{resume_list}{
+  \vspace{-5pt}
+  \begin{itemize}[itemsep=-3pt, parsep=0.2pt, leftmargin=20pt]
+}{
+  \end{itemize}
+  \vspace{-4pt}
+}
+
+\renewcommand\labelitemi{$\bullet$}
+
+\begin{document}
+
+\documentTitle{Piyush Keshari}{
+   \href{tel:+918543910622}{\underline{
+     \raisebox{-0.05\height} \faPhone\ +91-854-391-0622}} ~ | ~
+   \href{mailto:piyushkeshari24@gmail.com}{\underline{
+     \raisebox{-0.15\height} \faEnvelope\ piyushkeshari24@gmail.com}} ~ | ~
+   \href{https://kesharipiyush24.github.io/}{\underline{
+     \raisebox{-0.15\height} \faGlobe\ Portfolio}} ~ | ~
+   \href{https://linkedin.com/in/piyush-k-ba3a67134}{\underline{
+     \raisebox{-0.15\height} \faLinkedin\ Linkedin}} ~ | ~
+   \href{https://github.com/KeshariPiyush24}{\underline{
+     \raisebox{-0.15\height} \faGithub\ GitHub}} ~ | ~
+   \underline{
+     \raisebox{-0.15\height} \faMapMarker\ Varanasi, UP}
+}
+
+\tinysection{Summary}
+Full-Stack Developer with 2.5+ years of experience building web applications with React.js and Node.js. Proficient in RESTful APIs, SQL/NoSQL databases, authentication, authorization and maintaining clean code practices. Strong background in DevOps, test-driven development, and implementing API security best practices.
+
+\section{Technical Skills}
+\begin{multicols}{2}
+  \begin{itemize}[itemsep=-2pt, parsep=0.5pt, leftmargin=65pt]
+    \item[\textbf{Languages}] JavaScript (ES6+), TypeScript, Java, OOP
+    \item[\textbf{Frontend}] React.js, Figma, Redux, HTML5, CSS3, Material UI, Responsive Design
+    \item[\textbf{Backend}] Node.js, Express.js, REST APIs, Microservices
+    \item[\textbf{Databases}] MongoDB, MySQL, Redis, Query Optimization
+    \item[\textbf{Testing}] Mocha, Chai.js, TDD, Unit Testing
+    \item[\textbf{DevOps}] Docker, AWS (EC2, S3, Lambda, Cloudwatch), Git, GitHub, Linux, Cloudflare, CDN, Nginx
+    \item[\textbf{Tools}] VS Code, Postman, Sentry, JIRA, Chrome Devtools
+    \item[\textbf{Security}] JWT, OAuth 2.0, Input Validation
+    \item[\textbf{Additional}] Markdown, RegEx, SEO, YAML, JSON, Code Reviews, Payment Gateway, Application Security
+  \end{itemize}
+\end{multicols}
+
+\section{Soft Skills}
+\begin{itemize}[itemsep=-2pt, parsep=0.5pt, leftmargin=70pt]
+    \item[\textbf{Languages}] English (Professional Working Proficiency), Hindi (Native)
+    \item[\textbf{Additional}] Team Collaboration, Problem Solving, Agile Methodologies, Requirements Gathering, Cross-functional Coordination, Async Communication
+\end{itemize}
+
+\section{Professional Experience}
+\headingBf{Software Development Engineer 1}{March 2022 -- Present}
+\vspace{1pt}
+\headingIt{Springworks}{Remote}
+\vspace{2pt}
+\hspace{10pt}\textbf{Albus (AI-powered Integration Platform)} \small{(Tech Stack: Node.js, React.js, AWS, Express.js, Mocha, Chai.js, MongoDB, Redis)}
+\vspace{1pt}
+\begin{resume_list}
+    \item Collaborated with a team of 15 developers to build and maintain scalable backend and frontend microservices
+    \item Designed file parsers to validate content and enforce password protection across multiple formats, reducing backend load by 20\% and optimizing S3 storage costs
+    \item Achieved 80\% test coverage with Mocha, Chai.js, and Sinon, reducing production bugs by 30\%
+    \item Conducted in-depth code reviews to ensure adherence to best practices, proactively catching edge cases and enhancing system reliability
+\end{resume_list}
+\vspace{4pt}
+
+\hspace{10pt}\textbf{Burst (E-commerce Platform)} \small{(Tech Stack: Node.js, React.js, Express.js, AWS, Sentry, Redis, MySQL, REST APIs, PHP, Elastic Search)}
+\vspace{1pt}
+\begin{resume_list}
+    \item Developed scalable REST APIs to support 20K+ daily users, enabling profile management and CRM functionalities
+    \item Optimized database queries and integrated Redis caching, reducing average API response time from 500ms to 400ms
+    \item Led the migration from a legacy PHP codebase to Node.js microservices, cutting latency by 45\%
+    \item Designed and deployed promotional deals for seasonal campaigns, driving a 25\% revenue increase
+    \item Resolved over 100 critical bugs, significantly boosting system stability and user experience
+\end{resume_list}
+\vspace{4pt}
+
+\section{Technical Projects}
+\headingBf{Freelance Web Developer}{Jan 2024 -- Present}
+\vspace{2pt}
+\headingIt{New Rajshree Sweets}{Varanasi}
+\vspace{3pt}
+\hspace{10pt}\textbf{\href{https://newrajshreesweets.com}{\underline{E-Commerce and CRM Solution}}} \small{(Tech Stack: Node.js, React.js, Express.js, Redis, MySQL, REST APIs, Github Actions)}
+\vspace{1pt}
+\begin{resume_list}
+    \item Designed and built a full-stack application with a microservices architecture, supporting 200+ concurrent users
+    \item Implemented secure JWT authentication and phone number-based OTP verification, achieving a 99\% success rate
+    \item Optimized MySQL schema and integrated Redis caching, boosting query response times by 60\%
+    \item Integrated third-party payment gateways and POS systems, maintaining a 95\% transaction success rate
+    \item Deployed a containerized solution using Docker with an automated CI/CD pipeline through GitHub Actions
+    \item Developed an order tracking, inventory and customer management CRM system, reducing manual efforts for admin by 80\%
+\end{resume_list}
+
+\section{Education}
+\vspace{-1pt}
+\headingBf{B.Tech Computer Science (Honors)}{2019 -- 2023}
+\headingIt{GLA University, Mathura}{CPI: 8.23}
+\headingBf{Intermediate (CBSE)}{2017 -- 2018}
+\headingIt{Sant Atulanand Convent School, Varanasi}{Percentage: 83}
+\headingBf{High School (ICSE)}{2015 -- 2016}
+\headingIt{St Joseph's Convent School, Varanasi}{Percentage: 78.5}
+
+\section{Certifications \& Achievements}
+\begin{resume_list}
+  \item Solved 650+ DSA questions and participated in many contests on LeetCode \href{https://leetcode.com/u/KeshariPiyush24/}{\faLink}
+  \vspace{1pt}
+  \item MERN Stack and CI/CD Development Certification (GeeksForGeeks, 2024) \href{https://media.geeksforgeeks.org/certificates/1706532819/013b39c1dda8d49bf888496b0d0d6b1b.pdf}{\faLink}
+\end{resume_list}
+
+\end{document}
