@@ -42,11 +42,9 @@ const About = () => {
           </div>
 
           <p className="about_description">
-            Full Stack Developer with 2.5+ years of experience specializing in JavaScript-based web applications and
-            microservices. Proven expertise in React.js, Node.js, and modern DevOps practices. Demonstrated success in optimizing
-            application performance, implementing automated testing, and maintaining high-quality codebases. Strong background in
-            developing RESTful APIs and integrating third-party services. Skilled at analyzing application logs and implementing
-            structured error handling systems.
+            Full-Stack Developer with 2.5+ years of experience building web applications with React.js and Node.js.
+            Proficient in RESTful APIs, SQL/NoSQL databases, authentication, authorization, and maintaining clean code practices.
+            Strong background in DevOps, test-driven development, and implementing API security best practices.
           </p>
         </div>
       </div>
