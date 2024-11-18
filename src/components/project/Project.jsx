@@ -11,7 +11,12 @@ const Project = () => {
       </div>
 
       <div className="container project_container">
-        <div className="project_card">
+        <a
+          href="https://newrajshreesweets.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project_card"
+        >
           <div className="project_name">
             <div className="project_title">
               <BiAtom className="project_icon" />
@@ -22,9 +27,14 @@ const Project = () => {
           <div className="project_about">
             Full-stack MERN application with microservices architecture for e-commerce and CRM management. Features include secure authentication, optimized database queries with Redis caching, payment gateway integration, and real-time order tracking system.
           </div>
-        </div>
+        </a>
 
-        <div className="project_card">
+        <a
+          href="https://github.com/KeshariPiyush24/Huffman-Compressor"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project_card"
+        >
           <div className="project_name">
             <div className="project_title">
               <BiAtom className="project_icon" />
@@ -35,9 +45,14 @@ const Project = () => {
           <div className="project_about">
             A JAVA based compression tool which uses huffman encoding scheme for text compression. Implemented using Google Guava library for bi-directional mapping functionality.
           </div>
-        </div>
+        </a>
 
-        <div className="project_card">
+        <a
+          href="https://github.com/KeshariPiyush24/COVID-19-LIVE-Tracker"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project_card"
+        >
           <div className="project_name">
             <div className="project_title">
               <BiAtom className="project_icon" />
@@ -48,7 +63,7 @@ const Project = () => {
           <div className="project_about">
             A Jupiter Notebook based project which uses python to fetch live COVID-19 data from Government of India API. Features automated data updates through GitHub Actions workflow.
           </div>
-        </div>
+        </a>
       </div>
     </section>
   )
