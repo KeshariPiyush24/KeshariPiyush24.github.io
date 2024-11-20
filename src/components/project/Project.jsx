@@ -25,7 +25,7 @@ const Project = () => {
             <span className="project_duration">2024</span>
           </div>
           <div className="project_about">
-            FlowBeat is a time tracker and lofi radio that plays hip hop beats. It's the perfect background music for studying, working, or just relaxing.
+            FlowBeat: Elevate your productivity with smooth lofi beats and a minimalist countdown timer. Whether you're grinding through work, deep in study sessions, or in your creative zone, FlowBeat provides the perfect sonic backdrop and time tracking companion. Simple, elegant, and distraction-free.
           </div>
         </a>
 
