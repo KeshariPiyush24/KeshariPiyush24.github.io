@@ -12,6 +12,24 @@ const Project = () => {
 
       <div className="container project_container">
         <a
+          href="https://kesharipiyush24.github.io/FlowBeat/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project_card"
+        >
+          <div className="project_name">
+            <div className="project_title">
+              <BiAtom className="project_icon" />
+              <h2>FlowBeat - Hustle Harder, Lofi Louder!</h2>
+            </div>
+            <span className="project_duration">2024</span>
+          </div>
+          <div className="project_about">
+            FlowBeat is a time tracker and lofi radio that plays hip hop beats. It's the perfect background music for studying, working, or just relaxing.
+          </div>
+        </a>
+
+        <a
           href="https://newrajshreesweets.com"
           target="_blank"
           rel="noopener noreferrer"

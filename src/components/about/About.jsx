@@ -37,7 +37,7 @@ const About = () => {
             <article className="about_card">
               <AiOutlineFundProjectionScreen className='about_icon' />
               <h5>Projects</h5>
-              <small>3+ Completed</small>
+              <small>5+ Completed</small>
             </article>
           </div>
 
