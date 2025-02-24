@@ -1,5 +1,7 @@
 // Import dependencies
 import React from 'react'
+import { Helmet } from 'react-helmet'
+import icon from './assets/icon.ico'
 
 // Import components
 import Header from './components/header/Header'
@@ -16,6 +18,9 @@ import MouseFollower from './components/MouseFollower'
 const App = () => {
   return (
     <>
+      <Helmet>
+        <link rel="icon" href={icon} type="image/x-icon" />
+      </Helmet>
       <MouseFollower />
       <section id="home" className="section-container">
         <Header />
