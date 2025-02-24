@@ -14,18 +14,18 @@ const Experience = () => {
         <div className="experience_card">
           <div className="company_name">
             <MdWorkOutline className="work_icon" />
-            <h2>Springworks</h2>
-            <span className="experience_duration duration_pill">2023 - Present</span>
+            <h2>Sevenloop</h2>
+            <span className="experience_duration duration_pill">Dec, 2024 - Present</span>
           </div>
           <div className="experience_position">
             <p>Software Development Engineer 1</p>
           </div>
           <div className="experience_content">
-            <h4>Albus (AI-powered Integration Platform)</h4>
+            <h4>Revind.ai (ERP Solutions)</h4>
             <ul>
-              <li>Collaborated with team of 12 developers to develop and maintain Node.js microservices architecting integrations with JIRA, Slack, Notion, Google Drive etc.</li>
-              <li>Engineered efficient file parsers to validate content and password protection across multiple formats, reducing Python backend load by 20% and optimizing S3 storage costs.</li>
-              <li>Achieved 80% test coverage through Mocha, Chai.js and Sinon, reducing production bugs by 30%.</li>
+              <li>Developed a dynamic form builder enabling non-technical teams to create custom onboarding flows, eliminating developer dependencies.</li>
+              <li>Architected an internal email template builder tool, eliminating dependencies on developers.</li>
+              <li>Rectified 20+ bugs, resulting in 40% fewer user-reported issues and elevated application stability</li>
             </ul>
           </div>
         </div>
@@ -34,7 +34,7 @@ const Experience = () => {
           <div className="company_name">
             <MdWorkOutline className="work_icon" />
             <h2>Springworks</h2>
-            <span className="experience_duration duration_pill">2022 - 2023</span>
+            <span className="experience_duration duration_pill">March, 2022 - Dec, 2024</span>
           </div>
           <div className="experience_position">
             <p>Software Development Engineer Intern</p>
@@ -47,6 +47,14 @@ const Experience = () => {
               <li>Led migration of legacy PHP codebase to Node.js microservices, reducing latency by 45%.</li>
               <li>Engineered React/Redux features for seasonal campaigns, driving 25% revenue growth.</li>
               <li>Integrated Sentry error tracking and resolved 100+ critical bugs, improving application stability.</li>
+            </ul>
+          </div>
+          <div className="experience_content">
+            <h4>Albus (AI-powered Integration Platform)</h4>
+            <ul>
+              <li>Collaborated with team of 12 developers to develop and maintain Node.js microservices architecting integrations with JIRA, Slack, Notion, Google Drive etc.</li>
+              <li>Engineered efficient file parsers to validate content and password protection across multiple formats, reducing Python backend load by 20% and optimizing S3 storage costs.</li>
+              <li>Achieved 80% test coverage through Mocha, Chai.js and Sinon, reducing production bugs by 30%.</li>
             </ul>
           </div>
         </div>

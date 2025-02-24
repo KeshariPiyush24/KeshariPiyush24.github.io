@@ -43,7 +43,7 @@ const Education = () => {
           <div className="institution_name">
             <BsBook className="book_icon" />
             <div className="institution_details">
-              <h2>St Joseph's Convent School</h2>
+              <h2>St Joseph's Convent School, Varanasi</h2>
               <div className="education_position">
                 <span className="degree">PCMB & CS</span>
                 <span className="score">78.5%</span>

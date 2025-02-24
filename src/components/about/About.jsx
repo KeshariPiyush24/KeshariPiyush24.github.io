@@ -25,7 +25,7 @@ const About = () => {
             <article className="about_card">
               <MdOutlineWorkOutline className='about_icon' />
               <h5>Experience</h5>
-              <small>2.5+ Years Working</small>
+              <small>3+ Years Working</small>
             </article>
 
             <article className="about_card">
@@ -37,14 +37,12 @@ const About = () => {
             <article className="about_card">
               <AiOutlineFundProjectionScreen className='about_icon' />
               <h5>Projects</h5>
-              <small>5+ Completed</small>
+              <small>6+ Completed</small>
             </article>
           </div>
 
           <p className="about_description">
-            Full-Stack Developer with 2.5+ years of experience building web applications with React.js and Node.js.
-            Proficient in RESTful APIs, SQL/NoSQL databases, authentication, authorization, and maintaining clean code practices.
-            Strong background in DevOps, test-driven development, and implementing API security best practices.
+            Full-Stack Developer with 3+ years of experience in building scalable web applications. Proficient in RESTful APIs, SQL/NoSQL databases, authentication, authorization, Test-Driven Development (TDD), API security, and maintaining clean code practices.
           </p>
         </div>
       </div>

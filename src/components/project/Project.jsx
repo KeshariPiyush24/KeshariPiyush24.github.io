@@ -6,7 +6,7 @@ const Project = () => {
   return (
     <section id='project' className="section-container">
       <div className="section_heading">
-        <h5>What Projects I have</h5>
+        <h5>What Projects I Built ?</h5>
         <h1>My Projects</h1>
       </div>
 
