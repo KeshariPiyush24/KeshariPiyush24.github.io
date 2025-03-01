@@ -23,11 +23,11 @@
     border-radius: 1.5rem;
     border: 1px solid transparent;
     transition: var(--transition);
+    border-color: var(--color-primary-variant);
 }
 
 .experience_card:hover {
     background: transparent;
-    border-color: var(--color-primary-variant);
     cursor: default;
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -68,12 +68,57 @@
 
 .experience_content {
     padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+/* Project header styling */
+.project_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+
+.toggle_btn {
+    background: transparent;
+    border: none;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.toggle_btn:hover {
+    transform: scale(1.1);
+}
+
+.project_points {
+    animation: slideDown 0.3s ease forwards;
+    overflow: hidden;
+    padding-left: 0.5rem;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    text-align: left;
 }
 
 ul li {
@@ -83,6 +128,7 @@ ul li {
     font-size: 0.9rem;
     line-height: 1.5;
     color: var(--color-light);
+    position: relative;
 }
 
 ul li:last-child {
@@ -94,6 +140,9 @@ ul li::before {
     color: var(--color-primary);
     font-size: 1.2rem;
     margin-right: 0.4rem;
+    display: inline-block;
+    width: 1em;
+    text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -148,8 +197,127 @@ ul li::before {
     font-size: 1rem;
     margin: 1rem 0 0.5rem 0;
     text-align: left;
+    padding-left: 0;
 }
 
 .experience_content h4:first-child {
     margin-top: 0;
+}
+
+/* Slider Styles */
+.experience_slider_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.slider_card {
+  width: 100%;
+  min-height: 350px;
+  margin: 0 auto;
+  transition: transform 0.5s ease;
+}
+
+.slider_arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--color-primary);
+  color: var(--color-white);
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 10;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.slider_arrow:hover {
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+
+.prev_arrow {
+  left: -10.5rem;
+}
+
+.next_arrow {
+  right: -10.5rem;
+}
+
+.slider_indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.indicator {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: var(--color-bg-variant);
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: var(--color-primary);
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 1024px) {
+  .slider_card {
+    width: 90%;
+  }
+  
+  .slider_arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .prev_arrow {
+    left: -2.5rem;
+  }
+  
+  .next_arrow {
+    right: -2.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .slider_card {
+    width: 95%;
+  }
+  
+  .slider_arrow {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+  
+  .prev_arrow {
+    left: -1.5rem;
+  }
+  
+  .next_arrow {
+    right: -1.5rem;
+  }
+  
+  .indicator {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin: 0 0.3rem;
+  }
 }
