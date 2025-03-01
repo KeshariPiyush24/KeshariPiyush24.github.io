@@ -12,7 +12,7 @@ const Experience = () => {
     {
       company: "Incred",
       duration: "Feb, 2025 - Present",
-      position: "Software Development Engineer 1",
+      position: "SDE 1",
       projects: [
         {
           name: "SCF (Supply Chain Finance)",
@@ -23,7 +23,7 @@ const Experience = () => {
     {
       company: "Sevenloop",
       duration: "Dec, 2024 - Feb, 2025",
-      position: "Software Development Engineer 1",
+      position: "SDE 1",
       projects: [
         {
           name: "Revind.ai (ERP Solutions)",
@@ -38,7 +38,7 @@ const Experience = () => {
     {
       company: "Springworks",
       duration: "March, 2022 - Dec, 2024",
-      position: "Software Development Engineer Intern",
+      position: "SDE 1",
       projects: [
         {
           name: "Burst (E-commerce Platform)",
