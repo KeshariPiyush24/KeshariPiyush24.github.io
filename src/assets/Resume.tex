@@ -1,177 +1,186 @@
-\documentclass[letterpaper, 10pt]{article}
-
+\documentclass[letterpaper,11pt]{article}
+\usepackage{lmodern}
+\usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
 \usepackage{fontawesome5}
 \usepackage{multicol}
-\usepackage{bookmark}
-\usepackage{lastpage}
-\usepackage{CormorantGaramond}
-\usepackage{charter}
 \usepackage{xcolor}
-
-\definecolor{accentTitle}{HTML}{0e6e55}
-\definecolor{accentText}{HTML}{0e6e55}
-\definecolor{accentLine}{HTML}{a16f0b}
-
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-\urlstyle{same}
-
-% Margin adjustments
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.0in}
-\addtolength{\topmargin}{-0.7in}
-\addtolength{\textheight}{1.3in}
-
-% Spacing optimizations
-\setlength{\multicolsep}{1pt}
-\setlength{\columnsep}{4pt}
-\setlength{\tabcolsep}{2pt}
-\setlength{\footskip}{6pt}
-\setlength{\parskip}{0pt}
-\raggedbottom
-\raggedright
-
+\usepackage{tikz}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
+
+% Define colors for visual appeal while maintaining ATS compatibility
+\definecolor{primarycolor}{RGB}{0, 79, 144}
+\definecolor{accentcolor}{RGB}{0, 102, 179}
+
+% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-\newcommand{\documentTitle}[2]{
-\begin{center}
-    {\Huge\color{accentTitle} #1}
-    \vspace{1pt}
-    {\color{accentLine} \hrule height 0.8pt}
-    \vspace{1pt}
-    \footnotesize{#2}
-    \vspace{1pt}
-    {\color{accentLine} \hrule height 0.8pt}
-\end{center}
+% Adjust margins for better ATS parsing
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting with consistent spacing
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries\color{primarycolor}
+}{}{0em}{}[\color{accentcolor}\titlerule \vspace{-5pt}]
+
+% Custom commands with improved spacing
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
 }
 
-\titleformat{\section}{\vspace{2pt} \color{accentText} \raggedright\large\bfseries}{}{0em}{}[
-\color{accentLine}
-\titlerule]
-
-\newcommand{\tinysection}[1]{ \phantomsection
-\addcontentsline{toc}{section}{#1}
-{\large{\bfseries\color{accentText}#1} {\color{accentLine} |}}
-\vspace{1pt}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\color{primarycolor}#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\heading}[2]{ \hspace{5pt}#1\hfill#2\\[1pt] }
-
-\newcommand{\headingBf}[2]{ \heading{\textbf{#1}}{\textbf{#2}} }
-
-\newcommand{\headingIt}[2]{ \heading{\textit{#1}}{\textit{#2}} }
-
-\newenvironment{resume_list}{
-\vspace{-3pt}
-\begin{itemize}[itemsep=0.5pt, parsep=0.5pt, leftmargin=18pt] }{ \end{itemize}
-\vspace{-3pt}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\color{primarycolor}#1} & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
 }
 
-\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-\documentTitle{Piyush Keshari}{ \href{tel:+918543910622}{ \raisebox{-0.05\height}{\faPhone}\ +91-85439-10622} ~ | ~ \href{mailto:piyushkeshari24@gmail.com}{ \raisebox{-0.15\height}{\faEnvelope}\ piyushkeshari24@gmail.com} ~ | ~ \href{https://kesharipiyush24.github.io/}{ \raisebox{-0.15\height}{\faGlobe}\ Portfolio} ~ | ~ \href{https://linkedin.com/in/piyush-k-ba3a67134}{ \raisebox{-0.15\height}{\faLinkedin}\ LinkedIn} ~ | ~ \href{https://github.com/KeshariPiyush24}{ \raisebox{-0.15\height}{\faGithub}\ GitHub} ~ | ~  \raisebox{-0.15\height}{\faMapMarker}\ Varanasi, UP}
 
-\tinysection{Summary} Full-Stack Developer with 3+ years of experience in building scalable web applications. Proficient in RESTful APIs, SQL/NoSQL databases, authentication, authorization, Test-Driven Development (TDD), API security, and maintaining clean code practices.
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape \color{primarycolor} Piyush Keshari} \\ \vspace{3pt}
+    {\color{accentcolor} \hrule height 1pt} \vspace{3pt}
+    \small \raisebox{-0.1\height}\faPhone\ +91-85439-10622 ~ 
+    \href{mailto:piyushkeshari24@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  piyushkeshari24@gmail.com} ~ 
+    \href{https://linkedin.com/in/piyush-k-ba3a67134}{\raisebox{-0.2\height}\faLinkedin\ LinkedIn} ~
+    \href{https://github.com/KeshariPiyush24}{\raisebox{-0.2\height}\faGithub\ GitHub} ~
+    \href{https://kesharipiyush24.github.io/}{\raisebox{-0.2\height}\faGlobe\ Portfolio} ~
+    \raisebox{-0.1\height}\faMapMarker\ Bengaluru, KA \\
+    \vspace{2pt}
+    {\color{accentcolor} \hrule height 0.5pt}
+    \vspace{-8pt}
+\end{center}
 
-\section{Skills}
-\begin{multicols}{2}
-    \begin{itemize}[itemsep=0.5pt, parsep=0.5pt, leftmargin=65pt]
-        \item[\textbf{Languages}] JavaScript (ES6+), TypeScript, Java
-        \item[\textbf{Frontend}] React.js, Next.js, Redux, HTML5, CSS3, Tailwind, Material UI, SAAS, Pug.js
-        \item[\textbf{Backend}] Node.js, Express.js, REST APIs
-        \item[\textbf{Databases}] MongoDB, MySQL, Redis, DynamoDB, Neo4j
-        \item[\textbf{Testing}] Mocha, Chai.js, TDD, Unit Testing
-        \item[\textbf{DevOps}] Docker, AWS, Git, GitHub,
-        Linux, Cloudflare
-        \item[\textbf{Tools}] VS-Code, Postman, Sentry, JIRA, Chrome DevTools, Figma, Kibana
-        \item[\textbf{Security}] JWT, OAuth 2.0, Helmet.js
-        \item[\textbf{Additional}] Agile Methodologies, OOPS, Microservices, Responsive Design
-    \end{itemize}
-\end{multicols}
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+\small{Full-Stack Software Developer with 3+ years of experience building scalable web applications using JavaScript, TypeScript, React.js, Node.js, and cloud technologies. Expertise in RESTful APIs, microservices architecture, database design, authentication systems and Test-Driven Development.}
 
-\section{Experience}
+%-----------CORE COMPETENCIES-----------
+\section{Core Competencies}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages:} JavaScript ES6+, TypeScript, Java \\
+     \textbf{Frontend Technologies:} React.js, Next.js, Redux Toolkit, HTML5, CSS3, Tailwind CSS, Material UI, Responsive Design \\
+     \textbf{Backend Technologies:} Node.js, Express.js, Java SpringBoot, RESTful APIs, Microservices, MVC Architecture \\
+     \textbf{Database Technologies:} MongoDB, MySQL, Redis, DynamoDB, Neo4j, Elasticsearch \\
+     \textbf{Cloud and DevOps:} Amazon Web Services AWS, Docker, CI/CD Pipelines, GitHub Actions, Linux, Cloudflare \\
+     \textbf{Testing and Quality:} Test-Driven Development TDD, Mocha, Chai.js, Unit Testing, Code Reviews \\
+     \textbf{Security and Authentication:} JWT, OAuth 2.0, Helmet.js, OTP Verification, API Security \\
+     \textbf{Development Tools:} Visual Studio Code, Postman, Sentry, JIRA, Agile, Scrum, Chrome DevTools, Figma, Kibana, ESLint, Prettier \\
+    }}
+ \end{itemize}
+\vspace{-12pt}
 
-\headingBf{Software Development Engineer I}{Feb 2024 -- Present}
-\headingIt{Incred Finance}{Bengaluru}
-\vspace{5pt}
-\hspace{10pt}\textbf{Supply Chain Finance} \textbf{(Loan Approval Portal)} \small{(Tech Stack: Node.js, React.js, AWS, Express.js, MySQL, Neo4j, Github, DynamoDB, Java Springboot, Pug.js)}
-\begin{resume_list}
-    \item Led a \textbf{cross-functional team} of 4 (2 Frontend developers, 2 QA engineers), improving sprint velocity by 30\% through efficient task distribution and daily standups
-    \item Architected and implemented secure customer consent system using \textbf{JWT-based shortened verification links} delivered via email/SMS, achieving 99.7\% delivery rate and boosting conversion by 22\%
-    \item Engineered the entire consent approval system using \textbf{MVC architecture} with Pug.js templates, eliminating frontend dependency requirements while maintaining responsive design across all devices
-    \item Collaborated across 5+ teams (internal and external) to integrate multiple \textbf{microservices}, including Java SpringBoot applications, establishing robust API contracts and significantly improving system reliability with 99.95\% uptime
-    \item Established robust code quality infrastructure by implementing \textbf{ESLint, Prettier, Commitlint, and Husky pre-commit hooks} with custom rules, reducing code review cycles and eliminating common syntax issues, while maintaing best coding and commit message policies
-\end{resume_list}
+%-----------EXPERIENCE-----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
 
-\vspace{6pt}
+    \resumeSubheading
+      {Software Development Engineer I}{February 2024 -- Present}
+      {Incred Finance | Loan Approval Platform}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{Led cross-functional development team of 5 engineers, implementing agile methodologies and improving sprint velocity by 30 percent through effective task coordination and project management}
+        \resumeItem{Engineered enterprise customer consent management system with JWT-secured verification links via email and SMS, achieving 99.7 percent delivery rate and 22 percent conversion rate increase}
+        \resumeItem{Developed complete consent approval workflow using Model-View-Controller MVC architecture with EJS templates, delivering responsive web design while eliminating frontend framework dependencies}
+        \resumeItem{Integrated 5+ microservices including Java SpringBoot applications, establishing robust API contracts and maintaining 99.95 percent system uptime through effective service orchestration}
+        \resumeItem{Implemented comprehensive code quality infrastructure with ESLint, Prettier, Commitlint, and Husky pre-commit hooks, significantly reducing code review cycles and improving development efficiency}
+      \resumeItemListEnd
 
-\headingBf{Software Development Engineer I}{Dec 2024 -- Feb 2025}
-\headingIt{Ximkart (Sevenloop technology Pvt Ltd)}{Bengaluru}
-\vspace{5pt}
-\hspace{10pt}\textbf{Revind.ai} \textbf{(ERP Solutions)} \small{(Tech Stack: Node.js, Next.js, AWS, Express.js, MySQL, Bitbucket)}
-\begin{resume_list}
-    \item Developed a dynamic form builder enabling \textbf{non-technical teams} to create custom onboarding flows, eliminating developer dependencies
-    \item Architected an \textbf{internal email template builder tool}, eliminating dependencies on developers
-    \item Rectified \textbf{20+ bugs}, resulting in \textbf{40\% fewer user-reported issues} and elevated application stability
-\end{resume_list}
+    \resumeSubheading
+      {Software Development Engineer I}{December 2023 -- February 2024}
+      {Sevenloop Technology | ERP Solutions}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{Delivered dynamic form builder application enabling non-technical business teams to create custom user onboarding workflows, eliminating developer dependencies and reducing time-to-market}
+        \resumeItem{Resolved 20+ critical production bugs within 8 weeks, achieving 40 percent reduction in user-reported issues through systematic debugging and root cause analysis}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Software Development Engineer I}{March 2022 -- December 2023}
+      {Springworks | AI-Powered Tool}{Remote}
+      \resumeItemListStart
+        \resumeItem{Architected robust file parsing system with multi-format validation and password protection capabilities, reducing backend processing load by 20 percent and optimizing Amazon S3 storage costs}
+        \resumeItem{Achieved 80 percent automated test coverage using Mocha, Chai.js, and Sinon testing frameworks, resulting in 30 percent reduction in production incidents and improved software reliability}
+        \resumeItem{Maintained 99.9 percent system uptime as designated on-call engineer through proactive monitoring, incident resolution, and implementation of preventive measures}
+      \resumeItemListEnd
 
-\vspace{6pt}
+  \resumeSubHeadingListEnd
+\vspace{-12pt}
 
-\headingBf{Software Development Engineer I}{March 2022 -- Dec, 2024}
-\headingIt{Springworks (Springrole India Pvt Ltd)}{Remote}
-\vspace{5pt}
-\hspace{10pt}\textbf{Albus} \textbf{(AI-powered Integration Platform)} \small{(Tech Stack: Node.js, React.js, AWS, Express.js, Mocha, Chai.js, MongoDB, Redis)}
-\begin{resume_list}
-    \item Engineered \textbf{robust file parsers} to validate content and enforce password protection across multiple formats, \textbf{decreasing back-end load by 20\%} and optimizing S3 storage costs 
-    \item Delivered \textbf{80\% test coverage} with Mocha, Chai.js, and Sinon, \textbf{minimizing production bugs by 30\%}
-    \item Performed \textbf{code reviews} to ensure best practices, \textbf{catching edge cases} and enhancing system reliability
-    \item Served as an \textbf{on-call developer}, responsible for monitoring and resolving production issues in real-time, ensuring \textbf{99.9\% system uptime}
-\end{resume_list}
+%-----------FEATURED PROJECTS-----------
+\section{Featured Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {Full-Stack E-Commerce and ERP Solution | \href{https://newrajshreesweets.com}{\underline{newrajshreesweets.com}} | Freelance}{January 2024 -- Present}
+          \resumeItemListStart
+            \resumeItem{Built comprehensive business management solution with microservices architecture supporting concurrent users and real-time inventory management for retail operations}
+            \resumeItem{Implemented JWT authentication and SMS-based OTP verification system, maintaining 99 percent authentication success rate and ensuring secure user access}
+            \resumeItem{Optimized database performance with MySQL schema design and Redis caching implementation, achieving 60 percent improvement in query response times and enhanced user experience}
+            \resumeItem{Integrated multiple payment gateways and Point-of-Sale POS systems with 95 percent transaction success rate, processing 500+ daily financial transactions}
+            \resumeItem{Developed comprehensive Customer Relationship Management CRM dashboard for order tracking, inventory management, and business analytics, reducing manual administrative tasks by 80 percent}
+          \resumeItemListEnd
+          \vspace{-10pt}
 
-\vspace{4pt}
+    \resumeSubHeadingListEnd
+\vspace{-8pt}
 
-\hspace{10pt}\textbf{Burst} \textbf{(E-commerce Platform)} \small{(Tech Stack: Node.js, React.js, Express.js, AWS, Sentry, Redis, MySQL, REST APIs, PHP, Elasticsearch)}
-\begin{resume_list}
-    \item Developed \textbf{scalable REST APIs} supporting 20K+ daily users for profile management and CRM integration
-    \item Orchestrated the \textbf{migration from a legacy PHP codebase} to Node.js, cutting latency by 45\%
-    \item Drove \textbf{seasonal campaigns}, driving 25\% revenue growth
-    \item Eradicated \textbf{100+ critical bugs}, significantly boosting system stability and user experience
-\end{resume_list}
-
-\vspace{4pt}
-
-\section{Projects}
-\headingBf{Freelance Web Developer}{Jan 2024 -- Present}
-\headingIt{New Rajshree Sweets}{Remote}
-\hspace{10pt}\textbf{\href{https://newrajshreesweets.com}{\underline{E-Commerce and ERP Solution}}}
-\small{(Tech Stack: Node.js, React.js, Express.js, Redis, MySQL, REST APIs, GitHub Actions, Cloudflare)}
-\begin{resume_list}
-    \item Designed and built a full-stack application with a \textbf{microservices architecture}, supporting \textbf{multiple concurrent users}
-    \item Implemented secure JWT authentication and \textbf{phone number-based OTP verification}, achieving a 99\% success rate
-    \item Optimized MySQL schema and integrated Redis caching, \textbf{boosting query response times by 60\%}
-    \item Integrated \textbf{third-party payment gateways} and \textbf{POS systems}, maintaining a 95\% transaction success rate
-    \item Deployed a containerized solution using Docker with an \textbf{automated CI/CD pipeline} through GitHub Actions
-    \item Developed an order tracking, inventory and customer-management \textbf{CRM system}, slashing manual efforts for admin by 80\%
-\end{resume_list}
-
+%-----------EDUCATION-----------
 \section{Education}
-\headingBf{B.Tech Computer Science (Honors)}{2019 -- 2023}
-\headingIt{GLA University, Mathura}{CPI: 8.23}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bachelor of Technology in Computer Science with Honors}{2019 -- 2023}
+      {GLA University, Mathura, India | CGPA: 8.23/10.0}{}
+  \resumeSubHeadingListEnd
 
-\section{Certifications \& Achievements}
-\begin{resume_list}
-    \item Solved 650+ DSA questions and participated in many contests on \textbf{LeetCode} \href{https://leetcode.com/u/KeshariPiyush24/}{\faLink}
-    \item MERN Stack and CI/CD Development Certification | \textbf{GeeksForGeeks} (2024) \href{https://media.geeksforgeeks.org/certificates/1706532819/013b39c1dda8d49bf888496b0d0d6b1b.pdf}{\faLink}
-\end{resume_list}
+%-----------CERTIFICATIONS & ACHIEVEMENTS-----------
+\section{Professional Development}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Technical Expertise:} Solved 500+ Data Structures and Algorithms problems on LeetCode platform with active programming contest participation \\
+     \textbf{Industry Certification:} MERN Stack and CI/CD Development Certification from GeeksForGeeks 2024 \\
+    }}
+ \end{itemize}
+
 \end{document}
