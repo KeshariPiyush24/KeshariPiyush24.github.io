@@ -26,7 +26,7 @@ header {
     margin-bottom: 1rem;
     border-radius: 8px;
     color: var(--color-primary);
-    background: rgba(37, 99, 235, 0.09);
+    background: rgba(45, 212, 191, 0.1);
     border: 1px solid var(--color-primary-variant);
     font-size: 0.82rem;
     font-weight: 800;
@@ -57,7 +57,7 @@ header {
     padding: 0.35rem 0.7rem;
     border-radius: 8px;
     border: 1px solid var(--color-border);
-    background: rgba(255, 255, 255, 0.72);
+    background: rgba(255, 247, 232, 0.08);
     color: var(--color-muted);
     font-size: 0.84rem;
     font-weight: 700;
@@ -76,7 +76,7 @@ header {
     justify-self: center;
     border-radius: 8px;
     overflow: hidden;
-    background: linear-gradient(180deg, rgba(37, 99, 235, 0.22), rgba(4, 120, 87, 0.08));
+    background: linear-gradient(180deg, rgba(45, 212, 191, 0.2), rgba(246, 180, 80, 0.12));
     border: 1px solid var(--color-border);
     box-shadow: var(--shadow-soft);
     padding: 1rem 1rem 0;
@@ -98,7 +98,7 @@ header {
     align-items: center;
     padding: 1rem;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.86);
+    background: rgba(34, 26, 48, 0.88);
     border: 1px solid var(--color-border);
     box-shadow: var(--shadow-card);
     backdrop-filter: blur(18px);
@@ -125,7 +125,7 @@ header {
     height: 0.75rem;
     border-radius: 50%;
     background: var(--color-success);
-    box-shadow: 0 0 0 6px rgba(4, 120, 87, 0.11);
+    box-shadow: 0 0 0 6px rgba(139, 212, 80, 0.14);
     flex: 0 0 auto;
 }
 
@@ -149,7 +149,7 @@ header {
     justify-content: center;
     transition: var(--transition);
     border: 1px solid var(--color-border);
-    background: rgba(255, 255, 255, 0.74);
+    background: rgba(255, 247, 232, 0.08);
 }
 
 .header_social_icon {
@@ -164,15 +164,15 @@ header {
 }
 
 .twitter {
-    color: #1da1f2;
+    color: #67e8f9;
 }
 
 .github {
-    color: #24292f;
+    color: var(--color-text);
 }
 
 .linkedin {
-    color: #0077b5;
+    color: #7dd3fc;
 }
 
 @media screen and (max-width: 1024px) {

@@ -40,7 +40,7 @@
     justify-content: center;
     transition: var(--transition);
     flex: 0 0 auto;
-    background: rgba(37, 99, 235, 0.08);
+    background: rgba(45, 212, 191, 0.09);
 }
 
 .contact_icon {
@@ -66,13 +66,13 @@
 }
 
 .twitter {
-    color: #1da1f2;
-    background: rgba(29, 161, 242, 0.1);
+    color: #67e8f9;
+    background: rgba(103, 232, 249, 0.11);
 }
 
 .github {
-    color: #24292f;
-    background: rgba(36, 41, 47, 0.08);
+    color: var(--color-text);
+    background: rgba(255, 247, 232, 0.09);
 }
 
 .stackoverflow {
@@ -86,8 +86,8 @@
 }
 
 .linkedin {
-    color: #0077b5;
-    background: rgba(0, 119, 181, 0.1);
+    color: #7dd3fc;
+    background: rgba(125, 211, 252, 0.11);
 }
 
 @media screen and (max-width: 600px) {

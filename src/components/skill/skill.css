@@ -38,13 +38,13 @@
     min-height: 2rem;
     padding: 0.35rem 0.65rem;
     border-radius: 8px;
-    background: rgba(37, 99, 235, 0.07);
-    border: 1px solid rgba(37, 99, 235, 0.12);
+    background: rgba(45, 212, 191, 0.08);
+    border: 1px solid rgba(45, 212, 191, 0.14);
     transition: var(--transition);
 }
 
 .skill_details:hover {
-    background: rgba(37, 99, 235, 0.12);
+    background: rgba(246, 180, 80, 0.12);
 }
 
 .skill_details-icon {

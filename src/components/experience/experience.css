@@ -52,7 +52,7 @@
     color: var(--color-muted);
     font-size: 0.78rem;
     padding: 0.35rem 0.7rem;
-    background: rgba(37, 99, 235, 0.08);
+    background: rgba(45, 212, 191, 0.09);
     border: 1px solid var(--color-primary-variant);
     border-radius: 8px;
     white-space: nowrap;
@@ -81,7 +81,7 @@
 .toggle_btn {
     width: 2rem;
     height: 2rem;
-    background: rgba(37, 99, 235, 0.09);
+    background: rgba(45, 212, 191, 0.1);
     border: 1px solid var(--color-primary-variant);
     color: var(--color-primary);
     border-radius: 8px;
@@ -94,7 +94,7 @@
 
 .toggle_btn:hover {
     background: var(--color-primary);
-    color: var(--color-white);
+    color: #10201d;
 }
 
 .project_points {
@@ -151,7 +151,7 @@ ul li::before {
     cursor: pointer;
     font-size: 1.25rem;
     border: 1px solid var(--color-border);
-    background: rgba(255, 255, 255, 0.84);
+    background: rgba(255, 247, 232, 0.08);
     color: var(--color-primary);
     transition: var(--transition);
     box-shadow: 0 12px 32px rgba(24, 24, 27, 0.08);
@@ -159,7 +159,7 @@ ul li::before {
 
 .slider_arrow:hover {
     background: var(--color-primary);
-    color: var(--color-white);
+    color: #10201d;
 }
 
 .slider_indicators {

@@ -10,7 +10,7 @@ nav {
     display: flex;
     gap: 0.25rem;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.84);
+    background: rgba(34, 26, 48, 0.86);
     backdrop-filter: blur(20px);
     border: 1px solid var(--color-border);
     box-shadow: 0 18px 50px rgba(24, 24, 27, 0.12);
@@ -32,7 +32,7 @@ nav a {
 
 nav a:hover {
     color: var(--color-primary);
-    background: rgba(37, 99, 235, 0.08);
+    background: rgba(45, 212, 191, 0.1);
 }
 
 nav a small {
@@ -45,7 +45,7 @@ nav a small {
 
 nav a.active {
     color: var(--color-primary);
-    background: rgba(37, 99, 235, 0.1);
+    background: rgba(45, 212, 191, 0.13);
 }
 
 nav a.active small {
