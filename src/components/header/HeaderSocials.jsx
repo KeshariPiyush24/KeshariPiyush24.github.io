@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsTwitter, BsInstagram, BsLinkedin } from 'react-icons/bs'
+import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs'
 
 const HeaderSocials = () => {
   return (
@@ -14,9 +14,9 @@ const HeaderSocials = () => {
           <BsTwitter className='header_social_icon' />
         </div>
       </a>
-      <a href="https://www.instagram.com/kesharipiyush24/" target="_blank" rel="noreferrer">
-        <div className="circle instagram">
-          <BsInstagram className='header_social_icon' />
+      <a href="https://github.com/KeshariPiyush24" target="_blank" rel="noreferrer">
+        <div className="circle github">
+          <BsGithub className='header_social_icon' />
         </div>
       </a>
     </div>

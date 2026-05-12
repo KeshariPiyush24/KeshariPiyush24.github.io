@@ -1,122 +1,90 @@
-/* Root element */
 #about {
     text-align: center;
-    padding: 5rem 0;
-    background: linear-gradient(180deg,
-            transparent,
-            var(--color-bg-variant),
-            transparent);
-}
-
-.about_heading {
-    margin-bottom: 4rem;
-}
-
-.about_heading h5 {
-    color: var(--color-light);
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-}
-
-.about_heading h1 {
-    color: var(--color-primary);
-    margin-bottom: 0;
-    font-size: 2.5rem;
 }
 
 .about_container {
     display: grid;
-    grid-template-columns: 35% 50%;
-    gap: 15%;
-    opacity: 0.9;
+    grid-template-columns: minmax(240px, 0.42fr) minmax(0, 0.58fr);
+    gap: 4rem;
+    align-items: center;
 }
 
 .about_me {
     width: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 2rem;
-    background: linear-gradient(45deg,
-            transparent,
-            var(--color-primary),
-            transparent);
+    aspect-ratio: 1/1.12;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.16), rgba(4, 120, 87, 0.1));
     display: grid;
     place-items: center;
-    transition: var(--transition);
-}
-
-.about_me:hover {
-    transform: scale(1.02);
+    padding: 0.85rem;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-card);
 }
 
 .about_me-image {
-    border-radius: 2rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
     overflow: hidden;
-    transform: rotate(10deg);
-    transition: var(--transition);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-.about_me-image:hover {
-    transform: rotate(0) scale(1.05);
+.about_me-image img {
+    height: 100%;
 }
 
 .about_content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .about_cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .about_card {
-    background: var(--color-bg-variant);
-    border: 1px solid transparent;
-    border-radius: 1rem;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    text-align: left;
+    transition: var(--transition);
 }
 
 .about_card:hover {
-    background: transparent;
-    border-color: var(--color-primary);
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
 }
 
 .about_icon {
     color: var(--color-primary);
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.9rem;
 }
 
 .about_card h5 {
     font-size: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
 }
 
 .about_card small {
-    font-size: 0.8rem;
+    display: block;
+    font-size: 0.82rem;
     color: var(--color-light);
+    line-height: 1.45;
 }
 
 .about_description {
     text-align: left;
-    line-height: 1.8;
+    line-height: 1.85;
     font-size: 1rem;
-    color: var(--color-light);
-    margin-top: 1rem;
-    padding: 0 1rem;
+    color: var(--color-muted);
 }
 
-/* Update media queries */
+.about_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+}
+
 @media screen and (max-width: 1024px) {
     .about_container {
         grid-template-columns: 1fr;
@@ -124,26 +92,17 @@
     }
 
     .about_me {
-        width: 50%;
-        margin: 0 auto 3rem;
+        width: min(70%, 24rem);
+        margin: 0 auto;
     }
 }
 
-@media screen and (max-width: 600px) {
-    #about {
-        padding: 3rem 0;
+@media screen and (max-width: 700px) {
+    .about_cards {
+        grid-template-columns: 1fr;
     }
 
     .about_me {
-        width: 75%;
-    }
-
-    .about_cards {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-
-    .about_heading h1 {
-        font-size: 2rem;
+        width: 100%;
     }
 }

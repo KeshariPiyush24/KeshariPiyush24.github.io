@@ -10,7 +10,7 @@ const About = () => {
     <section id='about' className="section-container">
       <div className="section_heading">
         <h5>Get To Know Me</h5>
-        <h1>About Me</h1>
+        <h1>Engineer With Product Ownership</h1>
       </div>
 
       <div className="container about_container">
@@ -25,25 +25,35 @@ const About = () => {
             <article className="about_card">
               <MdOutlineWorkOutline className='about_icon' />
               <h5>Experience</h5>
-              <small>3+ Years Working</small>
+              <small>4+ years in production systems</small>
             </article>
 
             <article className="about_card">
               <AiOutlineCode className='about_icon' />
-              <h5>DSA</h5>
-              <small>650+ on LeetCode</small>
+              <h5>Stack</h5>
+              <small>React, Node.js, Spring Boot</small>
             </article>
 
             <article className="about_card">
               <AiOutlineFundProjectionScreen className='about_icon' />
-              <h5>Projects</h5>
-              <small>6+ Completed</small>
+              <h5>Delivery</h5>
+              <small>APIs, integrations, CI/CD</small>
             </article>
           </div>
 
           <p className="about_description">
-            Full-Stack Developer with 3+ years of experience in building scalable web applications. Proficient in RESTful APIs, SQL/NoSQL databases, authentication, authorization, Test-Driven Development (TDD), API security, and maintaining clean code practices.
+            Full Stack Software Engineer with 4+ years of experience building production web applications, backend APIs, microservices, and automation workflows. I am strongest where frontend craft meets backend reliability: REST APIs, SQL and NoSQL databases, authentication, third-party integrations, performance work, testing, and production debugging.
           </p>
+          <div className="about_tags" aria-label="Core strengths">
+            <span>JavaScript</span>
+            <span>TypeScript</span>
+            <span>React.js</span>
+            <span>Node.js</span>
+            <span>Java Spring Boot</span>
+            <span>AWS</span>
+            <span>Docker</span>
+            <span>AI Workflow Automation</span>
+          </div>
         </div>
       </div>
     </section>

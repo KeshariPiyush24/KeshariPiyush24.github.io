@@ -6,8 +6,8 @@ const Education = () => {
   return (
     <section id='education' className="section-container">
       <div className="education_heading">
-        <h5>What education I have</h5>
-        <h1>My Educations</h1>
+        <h5>Academic foundation</h5>
+        <h1>Education</h1>
       </div>
 
       <div className="container education_container">
@@ -17,8 +17,8 @@ const Education = () => {
             <div className="institution_details">
               <h2>GLA University, Mathura</h2>
               <div className="education_position">
-                <span className="degree">B.Tech CS</span>
-                <span className="score">8.23 CPI</span>
+                <span className="degree">B.Tech in Computer Science (Honours)</span>
+                <span className="score">CGPA: 8.23/10.0</span>
                 <span className="education_duration">2019 - 2023</span>
               </div>
             </div>

@@ -2,86 +2,69 @@ import React from 'react'
 import './project.css'
 import { BiAtom } from 'react-icons/bi'
 
+const projects = [
+  {
+    title: 'New Rajshree Sweets',
+    duration: '2024 - Present',
+    url: 'https://newrajshreesweets.com',
+    summary: 'Production-grade e-commerce and ERP platform built with React.js, Node.js, MySQL, Redis, REST APIs, payment integrations, CRM tooling, and real-time kiosk ordering.',
+    tags: ['React', 'Node.js', 'MySQL', 'Redis', 'WebSockets', 'n8n']
+  },
+  {
+    title: 'FlowBeat',
+    duration: '2024',
+    url: 'https://kesharipiyush24.github.io/FlowBeat/',
+    summary: 'A minimalist productivity app pairing a lofi audio experience with a focused countdown timer for work, study, and creative sessions.',
+    tags: ['React', 'UI Design', 'Productivity']
+  },
+  {
+    title: 'Huffman Compressor',
+    duration: '2023',
+    url: 'https://github.com/KeshariPiyush24/Huffman-Compressor',
+    summary: 'Java-based compression utility implementing Huffman encoding with Google Guava bi-directional mapping for text compression workflows.',
+    tags: ['Java', 'Algorithms', 'Compression']
+  },
+  {
+    title: 'COVID-19 Live Tracker',
+    duration: '2022',
+    url: 'https://github.com/KeshariPiyush24/COVID-19-LIVE-Tracker',
+    summary: 'Python notebook project that fetched live COVID-19 data from Government of India APIs with automated refreshes through GitHub Actions.',
+    tags: ['Python', 'Automation', 'GitHub Actions']
+  }
+]
+
 const Project = () => {
   return (
     <section id='project' className="section-container">
       <div className="section_heading">
-        <h5>What Projects I Built ?</h5>
-        <h1>My Projects</h1>
+        <h5>Selected builds</h5>
+        <h1>Featured Projects</h1>
       </div>
 
       <div className="container project_container">
-        <a
-          href="https://kesharipiyush24.github.io/FlowBeat/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project_card"
-        >
-          <div className="project_name">
-            <div className="project_title">
-              <BiAtom className="project_icon" />
-              <h2>FlowBeat - Hustle Harder, Lofi Louder!</h2>
+        {projects.map((project) => (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project_card"
+            key={project.title}
+          >
+            <div className="project_name">
+              <div className="project_title">
+                <BiAtom className="project_icon" />
+                <h2>{project.title}</h2>
+              </div>
+              <span className="project_duration">{project.duration}</span>
             </div>
-            <span className="project_duration">2024</span>
-          </div>
-          <div className="project_about">
-            FlowBeat: Elevate your productivity with smooth lofi beats and a minimalist countdown timer. Whether you're grinding through work, deep in study sessions, or in your creative zone, FlowBeat provides the perfect sonic backdrop and time tracking companion. Simple, elegant, and distraction-free.
-          </div>
-        </a>
-
-        <a
-          href="https://newrajshreesweets.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project_card"
-        >
-          <div className="project_name">
-            <div className="project_title">
-              <BiAtom className="project_icon" />
-              <h2>New Rajshree Sweets</h2>
+            <p className="project_about">{project.summary}</p>
+            <div className="project_tags">
+              {project.tags.map((tag) => (
+                <span key={tag}>{tag}</span>
+              ))}
             </div>
-            <span className="project_duration">2024 - Present</span>
-          </div>
-          <div className="project_about">
-            Full-stack MERN application with microservices architecture for e-commerce and CRM management. Features include secure authentication, optimized database queries with Redis caching, payment gateway integration, and real-time order tracking system.
-          </div>
-        </a>
-
-        <a
-          href="https://github.com/KeshariPiyush24/Huffman-Compressor"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project_card"
-        >
-          <div className="project_name">
-            <div className="project_title">
-              <BiAtom className="project_icon" />
-              <h2>Huffman Compressor</h2>
-            </div>
-            <span className="project_duration">2023</span>
-          </div>
-          <div className="project_about">
-            A JAVA based compression tool which uses huffman encoding scheme for text compression. Implemented using Google Guava library for bi-directional mapping functionality.
-          </div>
-        </a>
-
-        <a
-          href="https://github.com/KeshariPiyush24/COVID-19-LIVE-Tracker"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project_card"
-        >
-          <div className="project_name">
-            <div className="project_title">
-              <BiAtom className="project_icon" />
-              <h2>COVID 19 LIVE Tracker</h2>
-            </div>
-            <span className="project_duration">2022</span>
-          </div>
-          <div className="project_about">
-            A Jupiter Notebook based project which uses python to fetch live COVID-19 data from Government of India API. Features automated data updates through GitHub Actions workflow.
-          </div>
-        </a>
+          </a>
+        ))}
       </div>
     </section>
   )

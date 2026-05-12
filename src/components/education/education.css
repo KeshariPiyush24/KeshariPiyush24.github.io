@@ -1,64 +1,34 @@
 #education {
-    padding: 5rem 0;
     text-align: center;
-    background: linear-gradient(180deg,
-            transparent,
-            var(--color-bg-variant),
-            transparent);
-}
-
-.education_heading {
-    margin-bottom: 4rem;
-}
-
-.education_heading h5 {
-    color: var(--color-light);
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-}
-
-.education_heading h1 {
-    color: var(--color-primary);
-    margin-bottom: 0;
-    font-size: 2.5rem;
 }
 
 .education_container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+    gap: 1rem;
+    max-width: 860px;
 }
 
 .education_card {
-    background: var(--color-bg-variant);
-    padding: 2rem;
-    border-radius: 1.5rem;
-    border: 1px solid transparent;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.35rem;
+    transition: var(--transition);
 }
 
 .education_card:hover {
-    background: transparent;
-    border-color: var(--color-primary);
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
 }
 
 .institution_name {
     display: flex;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .book_icon {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: var(--color-primary);
     flex-shrink: 0;
+    margin-top: 0.2rem;
 }
 
 .institution_details {
@@ -67,67 +37,36 @@
 }
 
 .institution_details h2 {
-    color: var(--color-primary);
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
+    color: var(--color-text);
+    font-size: 1.2rem;
+    margin-bottom: 0.65rem;
 }
 
 .education_position {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.75rem;
 }
 
 .degree {
-    font-weight: 500;
-    color: var(--color-white);
+    font-weight: 800;
+    color: var(--color-text);
 }
 
 .score {
-    color: var(--color-light);
-    font-weight: 500;
-}
-
-.education_duration {
-    color: var(--color-light);
-    font-size: 0.9rem;
-    padding: 0.3rem 0.8rem;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 0.5rem;
-}
-
-@media screen and (max-width: 1024px) {
-    .education_container {
-        width: 90%;
-    }
+    color: var(--color-muted);
+    font-weight: 700;
 }
 
 @media screen and (max-width: 600px) {
-    #education {
-        padding: 3rem 0;
-    }
-
-    .education_heading h1 {
-        font-size: 2rem;
-    }
-
-    .education_card {
-        padding: 1.5rem;
-    }
-
-    .institution_details h2 {
-        font-size: 1.1rem;
+    .institution_name {
+        gap: 0.75rem;
     }
 
     .education_position {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.5rem;
-    }
-
-    .book_icon {
-        font-size: 2rem;
+        gap: 0.45rem;
     }
 }

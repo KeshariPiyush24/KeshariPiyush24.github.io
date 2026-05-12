@@ -4,122 +4,134 @@ import { MdWorkOutline } from 'react-icons/md'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 
+const experienceData = [
+  {
+    company: 'Incred Finance',
+    duration: 'February 2024 - Present',
+    position: 'Software Development Engineer I',
+    location: 'Bengaluru, India',
+    focus: 'Loan Approval Platform',
+    projects: [
+      {
+        name: 'Loan approval and digital consent workflows',
+        points: [
+          'Own production loan approval and digital consent workflows across application intake, verification, and approval journeys.',
+          'Coordinate with a 5-member engineering and QA team on planning, code reviews, debugging, and releases, improving execution efficiency by 30%.',
+          'Integrated 5+ Spring Boot and Node.js microservices with internal REST APIs and vendor APIs including Perfios and Karza, maintaining 99.95% uptime.',
+          'Engineered JWT-secured email and SMS verification workflows for customer consent, achieving 99.7% delivery and improving conversion by 22%.',
+          'Standardized quality gates with ESLint, Prettier, Commitlint, and Husky hooks while automating DynamoDB purge and cleanup scripts.'
+        ]
+      }
+    ]
+  },
+  {
+    company: 'Sevenloop Technology',
+    duration: 'December 2023 - February 2024',
+    position: 'Software Development Engineer I',
+    location: 'Bengaluru, India',
+    focus: 'ERP Solutions',
+    projects: [
+      {
+        name: 'ERP onboarding builders',
+        points: [
+          'Built reusable email template and dynamic form builders for ERP onboarding, helping non-technical teams manage workflows independently.',
+          'Resolved 20+ production bugs and reduced user-reported issues by 40% through focused debugging and root-cause fixes.'
+        ]
+      }
+    ]
+  },
+  {
+    company: 'Springworks',
+    duration: 'March 2022 - December 2023',
+    position: 'Software Development Engineer I',
+    location: 'Remote',
+    focus: 'AI-Powered SaaS Platform',
+    projects: [
+      {
+        name: 'Automation pipelines and file intelligence',
+        points: [
+          'Architected scalable file parsing and validation for AI-powered SaaS platforms, reducing backend processing load by 20% and optimizing Amazon S3 costs.',
+          'Raised automated test coverage to 80% with Mocha, Chai.js, and Sinon, reducing production incidents by 30%.',
+          'Maintained 99.9% uptime for customer-facing automation pipelines through monitoring, incident response, and preventive reliability work.'
+        ]
+      }
+    ]
+  }
+]
+
 const Experience = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [expandedProject, setExpandedProject] = useState(0);
-  
-  const experienceData = [
-    {
-      company: "Incred",
-      duration: "Feb, 2025 - Present",
-      position: "SDE 1",
-      projects: [
-        {
-          name: "SCF (Supply Chain Finance)",
-          points: []
-        }
-      ]
-    },
-    {
-      company: "Sevenloop",
-      duration: "Dec, 2024 - Feb, 2025",
-      position: "SDE 1",
-      projects: [
-        {
-          name: "Revind.ai (ERP Solutions)",
-          points: [
-            "Developed a dynamic form builder enabling non-technical teams to create custom onboarding flows, eliminating developer dependencies.",
-            "Architected an internal email template builder tool, eliminating dependencies on developers.",
-            "Rectified 20+ bugs, resulting in 40% fewer user-reported issues and elevated application stability"
-          ]
-        }
-      ]
-    },
-    {
-      company: "Springworks",
-      duration: "March, 2022 - Dec, 2024",
-      position: "SDE 1",
-      projects: [
-        {
-          name: "Burst (E-commerce Platform)",
-          points: [
-            "Built scalable REST APIs serving 10K+ daily users, handling profile management and CRM features.",
-            "Optimized DB queries and implemented Redis caching, reducing average API response time from 500ms to 400ms.",
-            "Led migration of legacy PHP codebase to Node.js microservices, reducing latency by 45%.",
-            "Engineered React/Redux features for seasonal campaigns, driving 25% revenue growth.",
-            "Integrated Sentry error tracking and resolved 100+ critical bugs, improving application stability."
-          ]
-        },
-        {
-          name: "Albus (AI-powered Integration Platform)",
-          points: [
-            "Collaborated with team of 12 developers to develop and maintain Node.js microservices architecting integrations with JIRA, Slack, Notion, Google Drive etc.",
-            "Engineered efficient file parsers to validate content and password protection across multiple formats, reducing Python backend load by 20% and optimizing S3 storage costs.",
-            "Achieved 80% test coverage through Mocha, Chai.js and Sinon, reducing production bugs by 30%."
-          ]
-        }
-      ]
-    }
-  ];
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [expandedProject, setExpandedProject] = useState(0)
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === experienceData.length - 1 ? 0 : prevIndex + 1
-    );
-    setExpandedProject(0); // Reset expanded project when changing slides
-  };
+    )
+    setExpandedProject(0)
+  }
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? experienceData.length - 1 : prevIndex - 1
-    );
-    setExpandedProject(0); // Reset expanded project when changing slides
-  };
+    )
+    setExpandedProject(0)
+  }
 
   const toggleProject = (index) => {
-    setExpandedProject(expandedProject === index ? -1 : index);
-  };
+    setExpandedProject(expandedProject === index ? -1 : index)
+  }
 
-  const currentExperience = experienceData[currentIndex];
+  const currentExperience = experienceData[currentIndex]
 
   return (
     <section id='experience' className="section-container">
       <div className="section_heading">
-        <h5>What Experience I have</h5>
-        <h1>My Experience</h1>
+        <h5>Where I have worked</h5>
+        <h1>Professional Experience</h1>
       </div>
 
       <div className="container experience_slider_container">
-        <button className="slider_arrow prev_arrow" onClick={prevSlide}>
+        <button className="slider_arrow prev_arrow" onClick={prevSlide} aria-label="Previous experience">
           <IoIosArrowBack />
         </button>
-        
+
         <div className="experience_card slider_card">
           <div className="company_name">
             <MdWorkOutline className="work_icon" />
-            <h2>{currentExperience.company}</h2>
+            <div>
+              <h2>{currentExperience.company}</h2>
+              <p>{currentExperience.focus}</p>
+            </div>
             <span className="experience_duration duration_pill">{currentExperience.duration}</span>
           </div>
           <div className="experience_position">
-            <p>{currentExperience.position}</p>
+            <p>{currentExperience.position} · {currentExperience.location}</p>
           </div>
-          
+
           {currentExperience.projects.map((project, index) => (
-            <div className="experience_content" key={index}>
-              <div 
-                className="project_header" 
+            <div className="experience_content" key={project.name}>
+              <div
+                className="project_header"
                 onClick={() => toggleProject(index)}
+                role="button"
+                tabIndex="0"
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault()
+                    toggleProject(index)
+                  }
+                }}
               >
                 <h4>{project.name}</h4>
-                <button className="toggle_btn">
+                <button className="toggle_btn" aria-label={expandedProject === index ? 'Collapse project details' : 'Expand project details'}>
                   {expandedProject === index ? <IoIosArrowUp /> : <IoIosArrowDown />}
                 </button>
               </div>
-              
-              {expandedProject === index && project.points.length > 0 && (
+
+              {expandedProject === index && (
                 <ul className="project_points">
-                  {project.points.map((point, i) => (
-                    <li key={i}>{point}</li>
+                  {project.points.map((point) => (
+                    <li key={point}>{point}</li>
                   ))}
                 </ul>
               )}
@@ -127,16 +139,20 @@ const Experience = () => {
           ))}
         </div>
 
-        <button className="slider_arrow next_arrow" onClick={nextSlide}>
+        <button className="slider_arrow next_arrow" onClick={nextSlide} aria-label="Next experience">
           <IoIosArrowForward />
         </button>
-        
-        <div className="slider_indicators">
-          {experienceData.map((_, index) => (
-            <span 
-              key={index} 
+
+        <div className="slider_indicators" aria-label="Experience navigation">
+          {experienceData.map((item, index) => (
+            <button
+              key={item.company}
               className={`indicator ${index === currentIndex ? 'active' : ''}`}
-              onClick={() => setCurrentIndex(index)}
+              onClick={() => {
+                setCurrentIndex(index)
+                setExpandedProject(0)
+              }}
+              aria-label={`Show ${item.company}`}
             />
           ))}
         </div>
